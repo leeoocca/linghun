@@ -1,0 +1,156 @@
+html {scroll-behavior: smooth;}
+@media screen and (prefers-reduced-motion: reduce) {
+	html {scroll-behavior: auto;}}
+
+.is-loading,
+.is-loading a {cursor: progress;}
+
+p,nav,ul,li {font-family: 'PT Sans', sans-serif;}
+h1,h2,h3,h4,h5,h6,.serif {font-family: 'PT Serif', serif;}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;}
+.nav-scroller .nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    color: rgba(255, 255, 255, .75);
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;}
+
+hr {border: 2px solid #903;width:3em;}
+ul {list-style: none;}
+ul li::before {
+    content: "\25AA";
+    color: #903;
+    font-weight: bolder;
+    display: inline-block;
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+section {padding-top: 60px;padding-bottom: 60px;}
+
+.scroll a {
+    position:relative;
+    bottom: 50px;
+    z-index: 2;
+    display: block;
+    color: #000;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+    line-height: .1em;}
+.scroll:hover {opacity: .5;}
+.scroll{text-align: center}
+#scroll a{padding-top: 70px;}
+#scroll span {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 24px;
+        height: 24px;
+        margin-left: -12px;
+        border-left: 1px solid #000;
+        border-bottom: 1px solid #000;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-animation: sdb05 1.5s infinite;
+        animation: scroll 1.5s infinite;
+        box-sizing: border-box;}
+@-webkit-keyframes scroll {
+    0% {-webkit-transform: rotate(-45deg) translate(0, 0);opacity: 0;}
+    50% {opacity: 1;}
+    100% {-webkit-transform: rotate(-45deg) translate(-20px, 20px);opacity: 0;}}
+@keyframes scroll {
+    0% {transform: rotate(-45deg) translate(0, 0);opacity: 0;}
+    50% {opacity: 1;}
+    100% {transform: rotate(-45deg) translate(-20px, 20px);opacity: 0;}}
+
+
+
+#intro{padding-top: 15vh}
+
+.scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    height: 100%;
+    margin-bottom: 20px;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    cursor: all-scroll;
+    background: #fff}
+.scrolling-wrapper-flexbox::-webkit-scrollbar {display: none;}
+.slide {flex: 0 0 auto;margin-right: 15px;height: 450px;}
+.no-scrollbar {scrollbar-width: none;margin-bottom: 0;padding-bottom: 0;}
+.no-scrollbar::-webkit-scrollbar {display: none;}
+
+.fade{transition: 1s;z-index: -1;position: absolute}
+.fade span {position: absolute}
+
+.scroll-right p {
+    position:absolute;
+    z-index: 2;
+    right: 50%;
+    margin-top: 225px;
+    display: block;
+    color: #000;
+    letter-spacing: .1em;
+    text-decoration: none;
+    line-height: .1em;}
+.scroll-right{text-align: center;}
+#scroll-right span {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        width: 24px;
+        height: 24px;
+        margin-left: 25px;
+        border-left: 1px solid #000;
+        border-bottom: 1px solid #000;
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+        -webkit-animation: sdb05 1.5s infinite;
+        animation: scroll-right 1.5s infinite;
+        box-sizing: border-box;}
+@-webkit-keyframes scroll-right {
+    0% {-webkit-transform: rotate(-135deg) translate(0, 0);opacity: 0;}
+    50% {opacity: 1;}
+    100% {-webkit-transform: rotate(-135deg) translate(-20px, 20px);opacity: 0;}}
+@keyframes scroll-right {
+    0% {transform: rotate(-135deg) translate(0, 0);opacity: 0;}
+    50% {opacity: 1;}
+    100% {transform: rotate(-135deg) translate(-20px, 20px);opacity: 0;}}
+
+p.about:first-letter {
+    color: #903;
+    float: left;
+    font-family: 'PT Serif', serif;
+    font-size: 4em;
+    line-height: 1em;
+    padding-top: 0em;
+    padding-right: 8px;
+    padding-left: 0px;
+}
+span.about{font-family: 'PT Serif', serif;text-transform: uppercase;font-size: 90%}
+
+img.loghi{max-height:75px}
+.overlay {
+    z-index: 4
+}
+
+
+
+
+.avatar {
+    width: 175px; height: 175px; object-fit: cover;
+}
